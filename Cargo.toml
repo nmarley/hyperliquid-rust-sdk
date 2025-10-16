@@ -17,16 +17,17 @@ alloy = { version = "1.0", default-features = false, features = [
   "sol-types",
   "signer-local",
 ] }
-chrono = "0.4.26"
-env_logger = "0.11.8"
-futures-util = "0.3.28"
+chrono = "0.4"
+env_logger = "0.11"
+futures-util = "0.3"
 lazy_static = "1.0"
-log = "0.4.19"
-reqwest = "0.12.19"
+log = "0.4"
+reqwest = "0.12"
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
 rmp-serde = "1.0"
 thiserror = "2.0"
 tokio = { version = "1.0", features = ["full"] }
-tokio-tungstenite = { version = "0.20.0", features = ["native-tls"] }
+tokio-tungstenite = { version = "0.28", features = ["rustls-tls-webpki-roots"] }
+rustls = { version = "0.23", default-features = false, features = ["ring"] }
 uuid = { version = "1.0", features = ["v4"] }
