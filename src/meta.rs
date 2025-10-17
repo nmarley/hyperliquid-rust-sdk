@@ -75,6 +75,7 @@ pub struct SpotAssetContext {
 pub struct AssetContext {
     pub day_ntl_vlm: String,
     pub funding: String,
+    #[serde(default)]
     pub impact_pxs: Option<Vec<String>>,
     pub mark_px: String,
     pub mid_px: Option<String>,
@@ -82,6 +83,8 @@ pub struct AssetContext {
     pub oracle_px: String,
     pub premium: Option<String>,
     pub prev_day_px: String,
+    #[serde(default)]
+    pub day_base_vlm: Option<String>,
 }
 
 #[derive(Deserialize, Debug, Clone)]
